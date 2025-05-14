@@ -8,6 +8,9 @@ from io import StringIO
 url = "https://drive.google.com/uc?id=1m6UZRFjRYSIFMP_a4_Ck3cloeSTfv20k"
 r = requests.get(url)
 df = pd.read_csv(StringIO(r.text), sep='\t')
+st.write("Columnas disponibles:", df.columns.tolist())
+st.dataframe(df.head())
+
 
 # Convertir columna 'periodo' a datetime
 df['periodo'] = pd.to_datetime(df['periodo'], format='%Y%m')
