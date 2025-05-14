@@ -1,0 +1,9 @@
+*.txt
+!requirements.txt
+
+__pycache__/
+*.pyc
+.venv/
+.env/
+.vscode/
+.streamlit/
